@@ -1,6 +1,5 @@
 <?php
 /**
-
  */
 ?><!DOCTYPE html>
 <!--[if IE 7]>
@@ -42,6 +41,7 @@
 		<!-- Menu -->
 		<div id="menu">
 			<!-- Menu 1 [Left side] -->
+			<?php wp_nav_menu( array('menu' => 'Menu1') ); ?>
 			<div id="menu1">
 				<a href="home" name="home" class="menubt">Home</a>		
 				<a href="#" class="menubt">Servi&ccedil;os</a>
@@ -82,7 +82,7 @@
 				<div class="nome">Mercado</div>
 			</div>
 			<div class="departamento">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/departamentos/telefonia.png" />
+				<i mg src="<?php echo get_template_directory_uri(); ?>/images/departamentos/telefonia.png" />
 				<div class="nome">Telefonia</div>
 			</div>
 			<div class="departamento">
