@@ -82,7 +82,7 @@
 				<div class="nome">Mercado</div>
 			</div>
 			<div class="departamento">
-				<i mg src="<?php echo get_template_directory_uri(); ?>/images/departamentos/telefonia.png" />
+				<img src="<?php echo get_template_directory_uri(); ?>/images/departamentos/telefonia.png" />
 				<div class="nome">Telefonia</div>
 			</div>
 			<div class="departamento">
