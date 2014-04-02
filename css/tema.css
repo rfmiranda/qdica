@@ -29,17 +29,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', end
 
 #menu{position:absolute; width:940px; left:50%; margin:0 0 0 -470px; height:100%;}
 
-#menu1{position:absolute; left:0px;}
+.menu-menu1-container{position:absolute; left:0px; height: 100%;}
 
-#menu2{position:absolute; right:0px;}
+.menu-menu1-container ul.menu, .menu-menu2-container ul.menu{list-style-type: none; height: 100%; margin: 0;}
 
-.menubt{position:relative; color:#FFF; font-size:14px; float:left; padding:11px; margin-right:2px; margin-left:2px; text-decoration:none;}
+.menu-menu2-container{position:absolute; right:0px;}
+
+li.menu-item{position:relative; color:#FFF; font-size:14px; float:left;  margin-right:2px; margin-left:2px; height: 100%;}
+
+li.menu-item a{color: #FFF; text-decoration: none; padding:11px; display: block;}
+
+li.menu-item:hover a, li.current-menu-item a{color: #000;}
 
 .menubtl{position:relative; color:#FFF; font-size:12px; font-weight:bold; float:left; padding: 5px 11px 8px 11px; margin-right:2px; margin-left:2px; text-decoration:none;}
 
 .menubtl span{font-size:10px; color:#FFC710;}
 
-#menu .selected, .menubt:hover, .menubtl:hover, .menubtl:hover span{ background:#FFC710; color:#000; cursor:pointer; }
+#menu .current-menu-item, li.menu-item:hover, .menubtl:hover, .menubtl:hover span{ background:#FFC710; color:#000;}
 
 
 /* Submenu */

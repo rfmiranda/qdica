@@ -42,20 +42,22 @@
 		<div id="menu">
 			<!-- Menu 1 [Left side] -->
 			<?php wp_nav_menu( array('menu' => 'Menu1') ); ?>
-			<div id="menu1">
+			<?php wp_nav_menu( array('menu' => 'Menu2') ); ?>
+			
+			<!-- <div id="menu1">
 				<a href="home" name="home" class="menubt">Home</a>		
 				<a href="#" class="menubt">Servi&ccedil;os</a>
 				<a href="#" class="menubt">Dicas</a>
 				<a href="cadastro" name="cadastro" class="menubt">Cadastro</a>
-			</div>
+			</div> -->
 			<!-- End Menu 1 -->
 			
-			<!-- Menu 2 [Right side] -->
+			<!-- Menu 2 [Right side] 
 			<div id="menu2">
 				<div class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Mesquita, RJ</div>
 				<div class="menubt" name="departamentos" onClick="toggleDepartamentos()">Departamentos</div>
 				<div class="menubt">Login</div>
-			</div>
+			</div>-->
 			<!-- End Menu 2 -->
 			
 
