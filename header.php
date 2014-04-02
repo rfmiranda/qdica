@@ -15,7 +15,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>Q Dica <?= $titlepage;?></title>
-	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/tema.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/load.css" />
 
