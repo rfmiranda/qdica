@@ -1,0 +1,18 @@
+#footerline{ position:relative; width:100%; height:15px; background-color:#FFC710; margin-top:50px;}
+
+#footer{ position:relative; width:100%; min-height:250px;  background: #3a3a3a;}
+
+#logofooter{position:absolute; width:138px; height:51px; left:50%; top:100px; margin: 0 0 0 250px; z-index:45;}
+	
+#sitemap{ position:relative; width:650px;  height:200px; left:50%; margin:0 0 0 -400px;}
+
+#sitemap .mappage{ position:relative; min-width:140px; float:left; margin-right:15px; margin-top:10px;}
+
+#sitemap .maptitle{ color:#ffc710; font-size:14px; font-weight:bold; padding:5px 0 5px 0; text-transform:uppercase;}
+
+#sitemap .maplink{ position:relative; display:table-row; color:#AAA; font-size:13px; text-decoration:none;}
+
+#sitemap .maplink:hover{ text-decoration:underline;}
+
+#copyrights{position:relative; width:100%; padding-top:25px; color:#FFC710; font-size:12px; text-align:center;}
+	

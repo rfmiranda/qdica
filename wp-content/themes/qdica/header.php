@@ -53,7 +53,7 @@
 			<!-- Menu 2 [Right side] -->
 			<div class="menu-menu2-container">
 				<ul class="menu">
-					<li class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Mesquita, RJ</li>
+					<li class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Rio de Janeiro, RJ</li>
 					<li class="menu-item" name="departamentos" onClick="toggleDepartamentos()"><a href="#">Departamentos</a></li>
 					<li class="menu-item"><a href="#">Login</a></li>
 				</ul>
@@ -112,5 +112,3 @@
 
 
 	<div class="container">
-
-		<div id="main" class="site-main row">
