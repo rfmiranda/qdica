@@ -39,7 +39,7 @@
 		<!-- Logo -->
 		<div id="logo">
 			<a href="home" target="_top" border="0">
-				<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="logo-qdica" border="0" />
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo-qdica" border="0" />
 			</a>
 		</div>
 		<!-- End Logo -->
