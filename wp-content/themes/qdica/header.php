@@ -48,28 +48,64 @@
 		<div id="menu">
 			<!-- Menu 1 [Left side] -->
 			<?php wp_nav_menu( array('menu' => 'Menu1') ); ?>
-			<?php wp_nav_menu( array('menu' => 'Menu2') ); ?>
-			
-			<!-- <div id="menu1">
-				<a href="home" name="home" class="menubt">Home</a>		
-				<a href="#" class="menubt">Servi&ccedil;os</a>
-				<a href="#" class="menubt">Dicas</a>
-				<a href="cadastro" name="cadastro" class="menubt">Cadastro</a>
-			</div> -->
 			<!-- End Menu 1 -->
-			
-			<!-- Menu 2 [Right side] 
-			<div id="menu2">
-				<div class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Mesquita, RJ</div>
-				<div class="menubt" name="departamentos" onClick="toggleDepartamentos()">Departamentos</div>
-				<div class="menubt">Login</div>
-			</div>-->
+
+			<!-- Menu 2 [Right side] -->
+			<div class="menu-menu2-container">
+				<ul class="menu">
+					<li class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Mesquita, RJ</li>
+					<li class="menu-item" name="departamentos" onClick="toggleDepartamentos()"><a href="#">Departamentos</a></li>
+					<li class="menu-item"><a href="#">Login</a></li>
+				</ul>
+			</div>
 			<!-- End Menu 2 -->
 			
 
 
 		</div>
 		<!-- End Menu -->
+
+	</div>
+	<div id="topline">
+
+		<div id="departamentos">
+			<div class="departamento">
+	        	<img src="img/departamentos/automoveis.png">
+	        	<div class="nome">Automóveis</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/informatica.png">
+	        	<div class="nome">Informática</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/mercado.png">
+	        	<div class="nome">Mercado</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/telefonia.png">
+	        	<div class="nome">Telefonia</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/roupas.png">
+	        	<div class="nome">Roupas</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/viagens.png">
+	        	<div class="nome">Viagens</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/jogos.png">
+	        	<div class="nome">Jogos</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/downloads.png">
+	        	<div class="nome">Downloads</div>
+	        </div>
+	        <div class="departamento">
+	        	<img src="img/departamentos/eletronicos.png">
+	        	<div class="nome">Eletrônicos</div>
+	        </div>
+		</div>
 
 	</div>
 	<!-- End Top -->
