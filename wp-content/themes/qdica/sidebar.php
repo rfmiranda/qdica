@@ -1,29 +1,20 @@
 <?php
 /**
- * The Sidebar containing the main widget area
+ * The sidebar containing the secondary widget area, displays on homepage, archives and posts.
  *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * If no active widgets in this sidebar, it will shows Recent Posts, Archives and Tag Cloud widgets.
+ *
+ * @package Odin
+ * @since 2.2.0
  */
 ?>
-<div id="secondary">
+
+<div id="secondary" class="<?php echo odin_sidebar_classes(); ?>" role="complementary">
 	<?php
-		$description = get_bloginfo( 'description', 'display' );
-		if ( ! empty ( $description ) ) :
+		if ( ! dynamic_sidebar( 'main-sidebar' ) ) {
+			the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ) );
+			the_widget( 'WP_Widget_Archives', array( 'count' => 0, 'dropdown' => 1 ) );
+			the_widget( 'WP_Widget_Tag_Cloud' );
+		}
 	?>
-	<h2 class="site-description"><?php echo esc_html( $description ); ?></h2>
-	<?php endif; ?>
-
-	<?php if ( has_nav_menu( 'secondary' ) ) : ?>
-	<nav role="navigation" class="navigation site-navigation secondary-navigation">
-		<?php wp_nav_menu( array( 'theme_location' => 'secondary' ) ); ?>
-	</nav>
-	<?php endif; ?>
-
-	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
-	<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</div><!-- #primary-sidebar -->
-	<?php endif; ?>
 </div><!-- #secondary -->
