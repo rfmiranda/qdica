@@ -25,6 +25,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
@@ -33,39 +34,34 @@
 
 <body <?php body_class(); ?>>
 
-<!-- Top -->
-	<div id="top">
-
+	<!-- Top -->
+	<div id="top" class="row">
+		<!-- Menu -->
+		<div class="container">
+		<div id="menu" class="col-lg-5">
+			<!-- Menu 1 [Left side] -->
+			
+			<?php wp_nav_menu( array('menu' => 'Menu1') ); ?>
+			
+		</div>
+		<!-- End Menu 1 -->
 		<!-- Logo -->
-		<div id="logo">
+		<div id="logo" class="col-lg-2">
 			<a href="home" target="_top" border="0">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo-qdica" border="0" />
 			</a>
 		</div>
 		<!-- End Logo -->
-		
-		<!-- Menu -->
-		<div id="menu">
-			<!-- Menu 1 [Left side] -->
-			<?php wp_nav_menu( array('menu' => 'Menu1') ); ?>
-			<!-- End Menu 1 -->
-
-			<!-- Menu 2 [Right side] -->
-			<div class="menu-menu2-container">
-				<ul class="menu">
-					<li class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Rio de Janeiro, RJ</li>
-					<li class="menu-item" name="departamentos" onClick="toggleDepartamentos()"><a href="#">Departamentos</a></li>
-					<li class="menu-item"><a href="#">Login</a></li>
-				</ul>
-			</div>
-			<!-- End Menu 2 -->
-			
-
-
+		<!-- Menu 2 [Right side] -->
+		<div class="menu-menu2-container col-lg-5">
+			<ul class="menu">
+				<li class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Rio de Janeiro, RJ</li>
+				<li class="menu-item" name="departamentos" onClick="toggleDepartamentos()"><a href="#">Departamentos</a></li>
+				<li class="menu-item"><a href="#">Login</a></li>
+			</ul>
+		</div><!-- End Menu 2 -->
 		</div>
-		<!-- End Menu -->
-
-	</div>
+	</div><!-- End Menu -->
 	<div id="topline">
 
 		<div id="departamentos">

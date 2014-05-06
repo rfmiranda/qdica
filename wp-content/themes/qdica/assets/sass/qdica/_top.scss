@@ -1,12 +1,12 @@
 /* ---------- Top ---------- */
 
-#top{ position:relative; width:100%; min-height:38px; background-color:#000;}
+#top{ position:relative; min-height:38px; background-color:$preto;}
 
 #logo{position:absolute; width:256px; height:65px; left:50%; top:0px; margin: 0 0 0 -128px; z-index:45; overflow:hidden; }
 
 /* Menu */
 
-#menu{position:absolute; width:940px; left:50%; margin:0 0 0 -470px; height:100%;}
+#menu{height:100%;}
 
 .menu-menu1-container{position:absolute; left:0px; height: 100%;}
 

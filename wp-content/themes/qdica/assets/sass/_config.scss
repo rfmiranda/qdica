@@ -13,5 +13,7 @@ $bootstrap-sass-asset-helper: false;
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
+@import "qdica/variaveis";
+
 // Odin variables
 $text-margin-bottom: $line-height-computed / 2;

@@ -53,6 +53,11 @@ Description: Odin main stylesheet.
 // Utility classes
 @import "bootstrap/utilities";
 
+//cssqdica
+@import "qdica/footer";
+@import "qdica/top";
+@import "qdica/padroes";
+
 /* =Odin styles
 -------------------------------------------------------------- */
 
@@ -65,8 +70,6 @@ Description: Odin main stylesheet.
 // Odin CSS Helpers
 @import "utilities/helpers";
 
-@import "top";
-@import "footer";
 
 
 /* =General
@@ -160,7 +163,7 @@ body{
 
 .container{
 
-min-height:400px;
+
 
 }
 

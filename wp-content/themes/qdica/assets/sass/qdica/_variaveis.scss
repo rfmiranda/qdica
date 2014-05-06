@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+//== Colors
+//
+//## colocar todas as configurações de cores aqui
+
+$preto:            #000 !default;
+$cinza:            #4a4a4a !default;
+$cinza2:           #666666 !default;
+$cinza3:           #8a8a8a !default;
+$cinza4:           #adadad !default;
+$cinza5:           #bdbdbd !default;
+$cinza6:           #cacaca !default;
+$cinza7:           #d7d7d7 !default;
+$cinza8:           #e3e3e3 !default;
+$cinza9:           #f0f0f0 !default;
+$branco:		   #fff !default;//fundo site
+
+
+
+
+//Scaffolding
+//
+// ## aqui fica os estilos globais os que mais vão ser usados, como margin etc...
+
+$font-size-padrao:		12px !default;
+$font-color-padrao:		$cinza2 !default;
+
+
+//== Typography
+//
+//## Fonte, line-height, e cor padrao do body, cabecalhos, e outros...
+
+$cor-body:		$branco !default;
+$font-padrao:	Open Sans, sans-serif !default;
+
+
+
+//== Components
+//
+//## Definir preenchimento e raio fronteira tamanhos comuns e muito mais. Valores com base em texto 14px e 1.428 line-height (~ 20px para começar).
+
+
+
+
+//** Cor global para os itens ativos (por exemplo, navs ou menus suspensos).
+
+
+//** Cor de fundo Global de artigos ativos (por exemplo, navs ou menus suspensos).
+
+
+//== Tables
+//
+//## Personaliza o componente `. Tabela` com valores básicos, cada um usado em todas as variações de mesa.
+
+
+
+
+//** Padding for `<th>`s and `<td>`s.
+
+
+//** Default background color used for all tables.
+
+
+//** Background color used for `.table-striped`.
+
+
+//** Background color used for `.table-hover`.
+
+//** Border color for table and cell borders.
+
+
+
+//== Buttons
+//
+//## Para cada um dos botões do Bootstrap, definir o texto, cor de fundo e borda.
+
+
+//== Forms
+//
+//##
+
+//== Dropdowns
+//
+//## Dropdown menu container and contents.
+
+//-- Z-index master list
+//
+// Aviso: Evite personalizar esses valores. Eles são usados ​​para a vista de um pássaro olho 
+// Dos componentes dependentes do eixo z e são projetados para trabalhar todos juntos.
+
