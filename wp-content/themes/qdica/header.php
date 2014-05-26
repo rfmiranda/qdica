@@ -41,7 +41,7 @@
 		<div id="menu" class="col-lg-5">
 			<!-- Menu 1 [Left side] -->
 			
-			<?php wp_nav_menu( array('menu' => 'Menu1') ); ?>
+			<?php wp_nav_menu( array('menu' => 'Menu1', 'menu_class'     => 'menu-principal') ); ?>
 			
 		</div>
 		<!-- End Menu 1 -->
