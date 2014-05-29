@@ -234,6 +234,163 @@ function odin_stylesheet_uri( $uri, $dir ) {
 
 add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
 
+
+
+//////////////////////// Funcoes usuarios ///////////////////////
+
+//Remover barra do site
+add_filter('show_admin_bar','__return_false');
+
+// Usuario Vendedor
+
+
+/*
+function remove_role_tecnico() {
+	remove_role( 'vendedor' );
+}
+add_action( 'admin_init', 'remove_role_tecnico' );
+*/
+function wp_admin_bar_new_item() {
+global $wp_admin_bar;
+$wp_admin_bar->remove_node( 'new-post' );
+}
+
+add_action('wp_before_admin_bar_render', 'wp_admin_bar_new_item');
+
+add_action( 'admin_init', 'add_role_vendedor' );
+	function add_role_vendedor() {
+	  add_role( 'vendedor', 'Vendedor', array(
+	     'activate_plugins' => false,
+		 'add_users' => false,
+		 'create_users' => false,
+		 'delete_others_pages' => false,
+		 'delete_others_posts' => false,
+		 'delete_pages' => false,
+		 'delete_plugins' => false,
+		 'delete_posts' => true,
+		 'delete_private_pages' => false,
+		 'delete_private_posts' => true,
+		 'delete_published_pages' => false,
+		 'delete_published_posts' => true,
+		 'delete_users' => false,
+		 'edit_dashboard' => false,
+		 'edit_files' => true,
+		 'edit_others_pages' => false,
+		 'edit_others_posts' => false,
+		 'edit_pages' => false,
+		 'edit_posts' => true,
+		 'edit_private_pages' => false,
+		 'edit_private_posts' => true,
+		 'edit_published_pages' => false,
+		 'edit_published_posts' => true,
+		 'edit_theme_options' => false,
+		 'edit_users' => false,
+		 'export' => true,
+		 'import' => true,
+		 'list_users' => false,
+		 'manage_categories' => false,
+		 'manage_links' => false,
+		 'manage_options' => false,
+		 'moderate_comments' => false,
+		 'promote_users' => false,
+		 'publish_pages' => false,
+		 'publish_posts' => true,
+		 'read_private_pages' => false,
+		 'read_private_posts' => true,
+		 'read' => true,
+		 'remove_users' => false,
+		 'switch_themes' => false,
+		 'unfiltered_upload' => false,
+		 'upload_files' => true,
+		 'update_core' => false,
+		 'update_plugins' => false,
+		 'update_themes' => false,
+		 'install_plugins' => false,
+		 'install_themes' => false,
+		 'delete_themes' => false,
+		 'edit_plugins' => false,
+		 'edit_themes' => false,
+		 'unfiltered_html' => false
+	    ));
+	}
+
+add_action( 'admin_init', 'vendedor_capabilities');
+function vendedor_capabilities() {
+global $user_ID;
+if ( current_user_can( 'vendedor' ) ) {
+
+	add_action( 'admin_head', 'admin_css' );
+
+	function admin_css()
+	{
+	echo '<style type="text/css">.update-nag{display:none !important;}</style>';
+	}
+
+
+
+
+ //remove_menu_page( 'edit.php?post_type=produtos' ); // tipo de post Produtos
+ remove_menu_page('edit.php'); // Posts
+ //remove_menu_page('upload.php'); // Mídia
+ //remove_menu_page('link-manager.php'); // Links
+ //remove_menu_page('edit-comments.php'); // Comentários
+ //remove_menu_page('edit.php?post_type=page'); // Páginas
+ //remove_menu_page('plugins.php'); // Plugins
+ //remove_menu_page('themes.php'); // Aparência
+ //remove_menu_page('users.php'); // Usuários
+ remove_menu_page('tools.php'); // Ferramentas
+ //remove_menu_page('options-general.php'); // Configurações
+ //remove_menu_page('wpcf7'); // Página do plugin Contact Form 7
+ } 
+}
+
+
+// Register Custom Post Type
+function cpt_produtos() {
+
+	$labels = array(
+		'name'                => _x( 'Produtos', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'Produto', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'Produtos', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'Todos', 'text_domain' ),
+		'view_item'           => __( 'View Item', 'text_domain' ),
+		'add_new_item'        => __( 'Novo Produto', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'edit_item'           => __( 'Edit Item', 'text_domain' ),
+		'update_item'         => __( 'Update Item', 'text_domain' ),
+		'search_items'        => __( 'Search Item', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$args = array(
+		'label'               => __( 'produto', 'text_domain' ),
+		'description'         => __( 'produtos qdica', 'text_domain' ),
+		'labels'              => $labels,
+		'supports'            => array( 'title', 'editor', 'comments', 'page-attributes', 'post-formats', ),
+		'taxonomies'          => array( 'category', 'post_tag' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'menu_icon'           => '',
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	register_post_type( 'produto', $args );
+
+}
+
+// Hook into the 'init' action
+add_action( 'init', 'cpt_produtos', 0 );
+
+
 /**
  * Core Helpers.
  */
