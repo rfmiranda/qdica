@@ -241,20 +241,9 @@ add_filter( 'stylesheet_uri', 'odin_stylesheet_uri', 10, 2 );
 //Remover barra do site
 add_filter('show_admin_bar','__return_false');
 
+
+
 // Usuario Vendedor
-
-
-/*
-function remove_role_tecnico() {
-	remove_role( 'vendedor' );
-}
-add_action( 'admin_init', 'remove_role_tecnico' );
-*/
-function wp_admin_bar_new_item() {
-global $wp_admin_bar;
-$wp_admin_bar->remove_node( 'new-post' );
-}
-
 add_action('wp_before_admin_bar_render', 'wp_admin_bar_new_item');
 
 add_action( 'admin_init', 'add_role_vendedor' );
@@ -319,32 +308,32 @@ function vendedor_capabilities() {
 global $user_ID;
 if ( current_user_can( 'vendedor' ) ) {
 
-	add_action( 'admin_head', 'admin_css' );
-
+	
+	// CSS Admin Vendedor
 	function admin_css()
 	{
-	echo '<style type="text/css">.update-nag{display:none !important;}</style>';
+		echo '<style type="text/css">.update-nag{display:none !important;}</style>';
+	}
+	add_action( 'admin_head', 'admin_css' );
+
+
+	//Remover botões vendedor
+	function wp_admin_bar_new_item() {
+		global $wp_admin_bar;
+		$wp_admin_bar->remove_node( 'new-post' );
 	}
 
+	remove_menu_page('edit.php'); // Posts
+	remove_menu_page('tools.php'); // Ferramentas
 
-
-
- //remove_menu_page( 'edit.php?post_type=produtos' ); // tipo de post Produtos
- remove_menu_page('edit.php'); // Posts
- //remove_menu_page('upload.php'); // Mídia
- //remove_menu_page('link-manager.php'); // Links
- //remove_menu_page('edit-comments.php'); // Comentários
- //remove_menu_page('edit.php?post_type=page'); // Páginas
- //remove_menu_page('plugins.php'); // Plugins
- //remove_menu_page('themes.php'); // Aparência
- //remove_menu_page('users.php'); // Usuários
- remove_menu_page('tools.php'); // Ferramentas
- //remove_menu_page('options-general.php'); // Configurações
- //remove_menu_page('wpcf7'); // Página do plugin Contact Form 7
  } 
 }
 
 
+
+//////////////////////////// CPT /////////////////////////////////
+
+//CPT - Produtos
 // Register Custom Post Type
 function cpt_produtos() {
 
@@ -376,7 +365,7 @@ function cpt_produtos() {
 		'show_in_nav_menus'   => true,
 		'show_in_admin_bar'   => true,
 		'menu_position'       => 5,
-		'menu_icon'           => '',
+		'menu_icon'           => 'dashicons-cart',
 		'can_export'          => true,
 		'has_archive'         => true,
 		'exclude_from_search' => false,
@@ -404,32 +393,21 @@ function change_default_title( $title ){
 add_filter( 'enter_title_here', 'change_default_title' );
 
 
-/**
- * Core Helpers.
- */
+
+//Core Helpers.
 require_once get_template_directory() . '/core/helpers.php';
 
-/**
- * WP Custom Admin.
- */
+//WP Custom Admin.
 require_once get_template_directory() . '/inc/admin.php';
 
-/**
- * Comments loop.
- */
+//Comments loop.
 require_once get_template_directory() . '/inc/comments-loop.php';
 
-/**
- * WP optimize functions.
- */
+//WP optimize functions.
 require_once get_template_directory() . '/inc/optimize.php';
 
-/**
- * WP Custom Admin.
- */
+//WP Custom Admin.
 require_once get_template_directory() . '/inc/plugins-support.php';
 
-/**
- * Custom template tags.
- */
+//Custom template tags.
 require_once get_template_directory() . '/inc/template-tags.php';
