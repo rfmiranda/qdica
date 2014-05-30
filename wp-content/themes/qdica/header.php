@@ -38,22 +38,22 @@
 	<div id="top" class="row">
 		<!-- Menu -->
 		<div class="container">
-		<div id="menu" class="col-lg-5">
+		<div id="menu" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 			<!-- Menu 1 [Left side] -->
 			
-			<?php wp_nav_menu( array('menu' => 'Menu1', 'menu_class'     => 'menu-principal') ); ?>
+			<?php wp_nav_menu( array('menu' => 'Menu1', 'menu_class'  => 'menu-principal') ); ?>
 			
 		</div>
 		<!-- End Menu 1 -->
 		<!-- Logo -->
-		<div id="logo" class="col-lg-2">
+		<div id="logo" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
 			<a href="home" target="_top" border="0">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="logo-qdica" border="0" />
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="img-thumbnail img-responsive" alt="logo-qdica" border="0" />
 			</a>
 		</div>
 		<!-- End Logo -->
 		<!-- Menu 2 [Right side] -->
-		<div class="menu-menu2-container col-lg-5">
+		<div class="menu-menu2-container col-lg-4 col-md-4 col-sm-5 col-xs-5">
 			<ul class="menu">
 				<li class="menubtl" title="Clique para modificar localização" onClick="loadModal('localidade.php','500','300');"><span>Estou em:</span> <br />Rio de Janeiro, RJ</li>
 				<li class="menu-item" name="departamentos" onClick="toggleDepartamentos()"><a href="#">Departamentos</a></li>

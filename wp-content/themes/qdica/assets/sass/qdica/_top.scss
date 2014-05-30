@@ -1,20 +1,20 @@
 /* ---------- Top ---------- */
 
-#top{ position:relative; min-height:38px; background-color:$preto;}
+#top{ position:relative; height:38px; background-color:$preto;}
 
-#logo{position:absolute; width:256px; height:65px; left:50%; top:0px; margin: 0 0 0 -128px; z-index:250; overflow:hidden;}
+#logo{position:relative;  height:38px;  top:0px; z-index:250;}
 
+.img-thumbnail{ background: none; border: 0px; padding: 0px;}
 /* Menu */
-
 #menu{height:100%;}
 
 .menu-principal{list-style-type: none;}
 
 .menu-menu1-container{position:absolute; left:0px; height: 100%;}
 
-.menu-menu1-container ul.menu, .menu-menu2-container ul.menu{list-style-type: none; height: 100%; margin: 0;}
+.menu-menu1-container ul.menu, .menu-menu2-container ul.menu{list-style-type: none; height: 100%; margin: 0; padding: 0}
 
-.menu-menu2-container{position:absolute; right:0px;}
+.menu-menu2-container{ padding:0px;}
 
 li.menu-item{position:relative; color:#FFF; font-size:14px; float:left;  margin-right:2px; margin-left:2px; height: 100%;}
 
@@ -68,3 +68,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .departamento img{ position:absolute; top:0px; left:0px;}
 
 .departamento .nome{ position:absolute; bottom:2px; width:100%; text-align:center; font-size:12px;}
+
+
+
+/* Small devices (tablets, 768px) */
+@media screen and (max-width: 992px) { 
+	#menu, .menu-menu2-container{ display: none;}
+ }
+
+/* Medium devices (desktops, 992px) */
+@media screen and (max-width: 1200px) { 
+	
+	li.menu-item{ font-size: 12px;} 
+}
