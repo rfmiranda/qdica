@@ -354,20 +354,20 @@ function cpt_produtos() {
 		'menu_name'           => __( 'Produtos', 'text_domain' ),
 		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
 		'all_items'           => __( 'Todos', 'text_domain' ),
-		'view_item'           => __( 'View Item', 'text_domain' ),
+		'view_item'           => __( 'Ver Produto', 'text_domain' ),
 		'add_new_item'        => __( 'Novo Produto', 'text_domain' ),
-		'add_new'             => __( 'Add New', 'text_domain' ),
-		'edit_item'           => __( 'Edit Item', 'text_domain' ),
-		'update_item'         => __( 'Update Item', 'text_domain' ),
-		'search_items'        => __( 'Search Item', 'text_domain' ),
-		'not_found'           => __( 'Not found', 'text_domain' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+		'add_new'             => __( 'Novo Produto', 'text_domain' ),
+		'edit_item'           => __( 'Editar Produto', 'text_domain' ),
+		'update_item'         => __( 'Atualizar Produto', 'text_domain' ),
+		'search_items'        => __( 'Buscar Produto', 'text_domain' ),
+		'not_found'           => __( 'Não encontrado', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Não encontrado na lixeira', 'text_domain' ),
 	);
 	$args = array(
 		'label'               => __( 'produto', 'text_domain' ),
 		'description'         => __( 'produtos qdica', 'text_domain' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'comments', 'page-attributes', 'post-formats', ),
+		'supports'            => array( 'title' ),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -389,6 +389,19 @@ function cpt_produtos() {
 
 // Hook into the 'init' action
 add_action( 'init', 'cpt_produtos', 0 );
+
+function change_default_title( $title ){
+ 
+    $screen = get_current_screen();
+ 
+    if ( 'produto' == $screen->post_type ){
+        $title = 'Digite o nome do Produto';
+    }
+ 
+    return $title;
+}
+ 
+add_filter( 'enter_title_here', 'change_default_title' );
 
 
 /**

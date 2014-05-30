@@ -36,16 +36,16 @@ if( !$__hasconfigured ) {
 
 	// ** MySQL settings - You can get this info from your web host ** //
 	/** The name of the database for WordPress */
-	define('DB_NAME', 'edumais.com.br');
+	define('DB_NAME', 'qdica.com');
 
 	/** MySQL database username */
-	define('DB_USER', 'trii');
+	define('DB_USER', 'root');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', '94-687)8#8{96>9t');
+	define('DB_PASSWORD', '');
 
 	/** MySQL hostname */
-	define('DB_HOST', 'live.mysql.trii.com.br');
+	define('DB_HOST', 'qdica.com');
 
 	/** Database Charset to use in creating database tables. */
 	define('DB_CHARSET', 'utf8');
