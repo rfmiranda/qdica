@@ -244,7 +244,6 @@ add_filter('show_admin_bar','__return_false');
 
 
 // Usuario Vendedor
-add_action('wp_before_admin_bar_render', 'wp_admin_bar_new_item');
 
 add_action( 'admin_init', 'add_role_vendedor' );
 	function add_role_vendedor() {
@@ -318,10 +317,11 @@ if ( current_user_can( 'vendedor' ) ) {
 
 
 	//Remover botões vendedor
-	function wp_admin_bar_new_item() {
+	function wp_admin_bar_remove_item() {
 		global $wp_admin_bar;
 		$wp_admin_bar->remove_node( 'new-post' );
 	}
+	add_action('wp_before_admin_bar_render', 'wp_admin_bar_remove_item');
 
 	remove_menu_page('edit.php'); // Posts
 	remove_menu_page('tools.php'); // Ferramentas

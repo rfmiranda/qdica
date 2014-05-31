@@ -24,6 +24,7 @@
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/sass/font-awesome-4.1.0/css/font-awesome.min.css">
 	<link href="<?php echo get_template_directory_uri(); ?>/assets/images/favicon.ico" rel="shortcut icon" />
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<!--[if lt IE 9]>
@@ -35,7 +36,7 @@
 <body <?php body_class(); ?>>
 
 	<!-- Top -->
-	<div id="top" class="row">
+	<div id="top">
 		<!-- Menu -->
 		<div class="container">
 		<div id="menu" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -44,14 +45,22 @@
 			<?php wp_nav_menu( array('menu' => 'Menu1', 'menu_class'  => 'menu-principal') ); ?>
 			
 		</div>
-		<!-- End Menu 1 -->
+		<!-- Fim Menu 1 -->
+		<!-- Menu Responsivo -->
+		<div class="menu-responsivo col-xs-2">
+			<div class="menu-bt">
+				<i class="fa fa-bars"></i>
+			</div>
+			<?php //wp_nav_menu( array('menu' => 'Menu1', 'menu_class'  => 'menu-principal') ); ?>
+		</div>
+		<!-- Fim Menu Responsivo -->
 		<!-- Logo -->
-		<div id="logo" class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text-center">
+		<div id="logo" class="col-lg-4 col-md-4 col-sm-8 col-xs-8 text-center">
 			<a href="home" target="_top" border="0">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" class="img-thumbnail img-responsive" alt="logo-qdica" border="0" />
 			</a>
 		</div>
-		<!-- End Logo -->
+		<!-- Fim Logo -->
 		<!-- Menu 2 [Right side] -->
 		<div class="menu-menu2-container col-lg-4 col-md-4 col-sm-5 col-xs-5">
 			<ul class="menu">
@@ -59,9 +68,20 @@
 				<li class="menu-item" name="departamentos" onClick="toggleDepartamentos()"><a href="#">Departamentos</a></li>
 				<li class="menu-item"><a href="#">Login</a></li>
 			</ul>
-		</div><!-- End Menu 2 -->
+		</div><!-- Fim Menu 2 -->
+		<!-- Login Responsivo -->
+		<div class="menu-responsivo col-xs-2">
+			<div class="menu-bt">
+				Login
+			</div>
+			<?php //wp_nav_menu( array('menu' => 'Menu1', 'menu_class'  => 'menu-principal') ); ?>
 		</div>
-	</div><!-- End Menu -->
+		<!-- Fim Login Responsivo -->
+		</div>
+	</div><!-- Fim Menu -->
+
+	
+
 	<div id="topline">
 
 		<div id="departamentos">
@@ -104,7 +124,7 @@
 		</div>
 
 	</div>
-	<!-- End Top -->
+	<!-- Fim Top -->
 
 
 	<div class="container">
