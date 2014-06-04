@@ -2,12 +2,19 @@
 get_header();
 ?>
 
- <?php putRevSlider( "banner_principal" ); ?>
+<?php
+  //Banner principal
+  putRevSlider( "banner_principal" ); 
+
+  //Busca
+  Qdica::search_bar();
+
+?>
 
 
 <div class="row"> 
 	<div class="col-lg-12">
-		teste
+		
 	</div>
 
 </div>
