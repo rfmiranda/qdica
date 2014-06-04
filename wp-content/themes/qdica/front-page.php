@@ -2,6 +2,9 @@
 get_header();
 ?>
 
+</div>
+<!-- close container -->
+
 <?php
   //Banner principal
   putRevSlider( "banner_principal" ); 
@@ -12,11 +15,15 @@ get_header();
 ?>
 
 
-<div class="row"> 
+
+<div class="container">
+
+	<div class="row"> 
 	<div class="col-lg-12">
 		
 	</div>
 
 </div>
+
 
 <?php get_footer();
