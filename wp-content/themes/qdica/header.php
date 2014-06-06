@@ -35,8 +35,18 @@
 
 <body <?php body_class(); ?>>
 
+	<div class="menu-responsivo-list">
+
+	</div>
+
 	<!-- Top -->
 	<div id="top">
+		<div class="menu-responsivo col-xs-2">
+			<div class="menu-bt">
+				<i class="fa fa-bars"></i>
+			</div>
+			<?php //wp_nav_menu( array('menu' => 'Menu1', 'menu_class'  => 'menu-principal') ); ?>
+		</div>
 		<!-- Menu -->
 		<div class="container">
 		<div id="menu" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
@@ -47,12 +57,7 @@
 		</div>
 		<!-- Fim Menu 1 -->
 		<!-- Menu Responsivo -->
-		<div class="menu-responsivo col-xs-2">
-			<div class="menu-bt">
-				<i class="fa fa-bars"></i>
-			</div>
-			<?php //wp_nav_menu( array('menu' => 'Menu1', 'menu_class'  => 'menu-principal') ); ?>
-		</div>
+		
 		<!-- Fim Menu Responsivo -->
 		<!-- Logo -->
 		<div id="logo" class="col-lg-4 col-md-4 col-sm-8 col-xs-8 text-center">

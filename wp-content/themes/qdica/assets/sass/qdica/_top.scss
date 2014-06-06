@@ -33,8 +33,8 @@ li.menu-item:hover a, li.current-menu-item a{color: #000;}
 
 	display:none;
 
-	.menu-bt{position: relative;color: #FFC710;font-size: 28px;top: 0px;padding: 0 10px;width: 45px;
-		&:hover{background:#FFC710; color:#000;}
+	.menu-bt{position: absolute; left:0px; color: #FFC710;font-size: 17px;top: 0px;padding: 7px 10px;width: 36px;
+		&:hover{background:#FFC710; color:#000; cursor:pointer;}
 	}
 }
 
