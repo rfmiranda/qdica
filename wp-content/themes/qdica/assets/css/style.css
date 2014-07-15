@@ -7002,73 +7002,78 @@ button {
 }
 
 .m-t-small {
-  margin-top: 5px;
+  margin-top: 5px !important;
 }
 
 .m-t {
-  margin-top: 10px;
+  margin-top: 10px !important;
 }
 
 .m-t-large {
-  margin-top: 15px;
+  margin-top: 15px !important;
 }
 
 .m-t-xlarge {
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 .m-r-small {
-  margin-right: 5px;
+  margin-right: 5px !important;
 }
 
 .m-r {
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 
 .m-r-large {
-  margin-right: 15px;
+  margin-right: 15px !important;
 }
 
 .m-r-xlarge {
-  margin-right: 20px;
+  margin-right: 20px !important;
 }
 
 .m-b-small {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 }
 
 .m-b {
-  margin-bottom: 10px;
+  margin-bottom: 10px !important;
 }
 
 .m-b-large {
-  margin-bottom: 15px;
+  margin-bottom: 15px !important;
 }
 
 .m-b-xlarge {
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
 
 .m-l-small {
-  margin-left: 5px;
+  margin-left: 5px !important;
 }
 
 .m-l {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 
 .m-l-large {
-  margin-left: 15px;
+  margin-left: 15px !important;
 }
 
 .m-l-xlarge {
-  margin-left: 20px;
+  margin-left: 20px !important;
 }
 
 .text-default {
-  font-size: 13px;
-  color: #777;
-  display: flex;
+  font-size: 13px !important;
+  color: #777 !important;
+  display: flex !important;
+}
+
+.form-control:focus {
+  border-color: #f3d600 !important;
+  box-shadow: 0 0 8px 0px rgba(255, 237, 31, 0.7) !important;
 }
 
 .busca_principal {

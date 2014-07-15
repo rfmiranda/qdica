@@ -28,30 +28,38 @@ body{
 
 
 //Margin
-.m-t-small{margin-top:5px}
-.m-t{margin-top:10px}
-.m-t-large{margin-top:15px}
-.m-t-xlarge{margin-top:20px}
+.m-t-small{margin-top:5px !important;}
+.m-t{margin-top:10px !important;}
+.m-t-large{margin-top:15px !important;}
+.m-t-xlarge{margin-top:20px !important;}
 
-.m-r-small{margin-right:5px}
-.m-r{margin-right:10px}
-.m-r-large{margin-right:15px}
-.m-r-xlarge{margin-right:20px}
+.m-r-small{margin-right:5px !important;}
+.m-r{margin-right:10px !important;}
+.m-r-large{margin-right:15px !important;}
+.m-r-xlarge{margin-right:20px !important;}
 
-.m-b-small{margin-bottom:5px}
-.m-b{margin-bottom:10px}
-.m-b-large{margin-bottom:15px}
-.m-b-xlarge{margin-bottom:20px}
+.m-b-small{margin-bottom:5px !important;}
+.m-b{margin-bottom:10px !important;}
+.m-b-large{margin-bottom:15px !important;}
+.m-b-xlarge{margin-bottom:20px !important;}
 
-.m-l-small{margin-left:5px}
-.m-l{margin-left:10px}
-.m-l-large{margin-left:15px}
-.m-l-xlarge{margin-left:20px}
+.m-l-small{margin-left:5px !important;}
+.m-l{margin-left:10px !important;}
+.m-l-large{margin-left:15px !important;}
+.m-l-xlarge{margin-left:20px !important;}
+
 
 //Text
-
 .text-default{
-	font-size: 13px;
-	color: #777;
-	display: flex;
+	font-size: 13px !important;
+	color: #777 !important;
+	display: flex !important;
+}
+
+
+//Form
+
+.form-control:focus{
+	border-color: $amarelo !important;
+	box-shadow: 0 0 8px 0px rgba(255, 237, 31, 0.7) !important;
 }
