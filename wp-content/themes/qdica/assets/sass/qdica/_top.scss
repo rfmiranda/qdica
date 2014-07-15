@@ -36,6 +36,10 @@ li.menu-item:hover a, li.current-menu-item a{color: #000;}
 	.menu-bt{position: absolute; left:0px; color: #FFC710;font-size: 17px;top: 0px;padding: 7px 10px;width: 36px;
 		&:hover{background:#FFC710; color:#000; cursor:pointer;}
 	}
+
+	.menu-bt-login{position: absolute; right:0px; color: #FFC710;font-size: 17px;top: 0px;padding: 7px 10px;
+		&:hover{background:#FFC710; color:#000; cursor:pointer;}
+	}
 }
 
 

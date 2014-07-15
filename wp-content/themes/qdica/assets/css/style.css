@@ -6798,6 +6798,19 @@ li.menu-item:hover a, li.current-menu-item a {
   color: #000;
   cursor: pointer;
 }
+.menu-responsivo .menu-bt-login {
+  position: absolute;
+  right: 0px;
+  color: #FFC710;
+  font-size: 17px;
+  top: 0px;
+  padding: 7px 10px;
+}
+.menu-responsivo .menu-bt-login:hover {
+  background: #FFC710;
+  color: #000;
+  cursor: pointer;
+}
 
 /* Submenu */
 .menubt:hover .submenu {
