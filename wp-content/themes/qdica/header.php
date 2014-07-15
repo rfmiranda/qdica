@@ -83,7 +83,8 @@
 		</div>
 		<!-- Fim Login Responsivo -->
 		</div>
-	</div><!-- Fim Menu -->
+
+	</div><!-- Fim Top -->
 
 	
 
@@ -130,6 +131,17 @@
 
 	</div>
 	<!-- Fim Top -->
+
+	<div class="login-container container">
+		<div class="login-panel container">
+			<input type="text" class="form-control m-b-small" placeholder="Login ou Email" name="login" />
+			<input type="password" class="form-control m-b-small" placeholder="Senha" name="senha" />
+			<div class="m-b-small text-default">
+				<input type="checkbox" name="manter" class="m-r-small" /> Manter-me conectado
+			</div>
+			<input type="submit" class="btn btn-primary m-t" value="Entrar"/>
+		</div>
+	</div>
 
 
 	<div class="container">

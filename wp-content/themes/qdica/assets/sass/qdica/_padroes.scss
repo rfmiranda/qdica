@@ -16,12 +16,42 @@ body{
 }
 
 .btn-primary{
-	background: $amarelo1;
-	border-color: $amarelo;
+	background: $amarelo1 !important;
+	border-color: $amarelo !important;
+	color: #FFF !important;
 
 	&:hover{ 
-		background: $amarelo2;
-		border-color: $amarelo;
+		background: $amarelo2 !important;
+		border-color: $amarelo !important;
 	}
 }
 
+
+//Margin
+.m-t-small{margin-top:5px}
+.m-t{margin-top:10px}
+.m-t-large{margin-top:15px}
+.m-t-xlarge{margin-top:20px}
+
+.m-r-small{margin-right:5px}
+.m-r{margin-right:10px}
+.m-r-large{margin-right:15px}
+.m-r-xlarge{margin-right:20px}
+
+.m-b-small{margin-bottom:5px}
+.m-b{margin-bottom:10px}
+.m-b-large{margin-bottom:15px}
+.m-b-xlarge{margin-bottom:20px}
+
+.m-l-small{margin-left:5px}
+.m-l{margin-left:10px}
+.m-l-large{margin-left:15px}
+.m-l-xlarge{margin-left:20px}
+
+//Text
+
+.text-default{
+	font-size: 13px;
+	color: #777;
+	display: flex;
+}
